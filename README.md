@@ -1,1 +1,1 @@
-# MAO-ProductPrevievCard
+# MAO-ProductPreviewCard
