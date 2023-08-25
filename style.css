@@ -1,0 +1,334 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+  background: hsl(33, 42%, 87%);
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* /////////Desktop style/////////// */
+
+body {
+  display: flex;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  min-width: 1300px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  align-items: flex-start;
+}
+.img {
+  flex: 1;
+}
+.imgMobile {
+  max-width: 250px;
+  flex: 1;
+  align-self: stretch;
+}
+
+img {
+  border-radius: 10px 0 0 10px;
+}
+.imgMobile {
+  display: none;
+}
+.hero__text {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  padding: 0.875em;
+  padding-top: 2em;
+  align-self: stretch;
+  border-radius: 0 10px 10px 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+.perfume {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 7px;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  padding-bottom: 1em;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  line-height: 2.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.p__body {
+  color: hsl(228, 12%, 48%);
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.666em;
+  padding: 15px 0;
+  margin: 20px 0;
+}
+
+.price {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.big {
+  font-family: "Fraunces", serif;
+
+  font-size: 50px;
+  color: rgb(33, 85, 66);
+}
+
+.small {
+  font-size: 1.9375rem;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+}
+
+.button {
+  background: rgb(33, 85, 66);
+  color: #fff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.875em;
+  padding: 0.7143rem;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1.7143rem;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.icn {
+  width: 25px;
+  margin: 0 auto;
+}
+.button__text {
+  font-size: 20px;
+}
+
+.last {
+  width: 40%;
+  margin: 20px auto;
+}
+@media (max-width: 1375px) {
+  /* /////////Mobile style/////////// */
+
+  .hero {
+    max-width: 960px;
+    min-width: 450px;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 80%;
+    max-width: 425px;
+    margin: 0 auto;
+    display: block;
+  }
+  .imgMobile {
+    max-width: 100%;
+    display: block;
+  }
+
+  img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .imgDesktop {
+    display: none;
+  }
+  .hero__text {
+    background-color: rgb(255, 255, 255);
+
+    padding: 1.875em;
+    border-radius: 0 0 10px 10px;
+  }
+
+  p {
+    font-size: 0.875em;
+  }
+
+  .perfume {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 7px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    padding-bottom: 1em;
+  }
+
+  h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    line-height: 3rem;
+  }
+
+  .p__body {
+    color: hsl(228, 12%, 48%);
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.666em;
+    padding: 1.333em 0;
+  }
+
+  .price {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .big {
+    font-family: "Fraunces", serif;
+
+    font-size: 2.875em;
+    color: rgb(33, 85, 66);
+  }
+
+  .small {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat", sans-serif;
+    text-decoration: line-through;
+  }
+
+  .button {
+    background: rgb(33, 85, 66);
+    color: #fff;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2gem;
+    padding: 0.7143rem;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.7143rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .icn {
+    width: 25px;
+    margin: 0 auto;
+  }
+  .button__text {
+    font-size: 20px;
+  }
+  span {
+    margin-left: auto;
+  }
+
+  .last {
+    width: 80%;
+    max-width: 450px;
+    margin: 20px auto;
+  }
+  .span__words {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
